@@ -6,21 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediaPlayer</title>
     <link rel="stylesheet" href="proj2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-v6HmdU6Xd1HR6tuioU6TjYG6SDzT2rRXm9XcJWZB8fZWXqpQ4+4jtTNBnEkzCRbl+mJLKfE+swdu9gFpJNC1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <div class="main-grid">
         <div class="top">
             <label for="file-input">Select</label>
-            <input type="file" id="file-input" accept="audio/*" hidden>
+            <input type="file" id="file-input" accept="audio/*" multiple hidden>
         </div>
-        <div class="lat">2</div>
+        <div class="lat">
+            <ul class="songs-list"></ul>
+        </div>
         <div class="equ">3</div>
         <div class="middlewave">4</div>
         <div class="middle">5</div>
         <div class="right">6</div>
         <div class="main">7</div>
         <div class="piano">8</div>
-        <div class="footer">10</div>
+        <div class="footer">
+            <button id="play-pause-btn"><i class="fas fa-play"></i></button>
+            <button id="stop-btn"><i class="fas fa-stop"></i></button>
+        </div>
       </div>    
+
+      <script src="script.js"></script>
 </body>
 </html>
