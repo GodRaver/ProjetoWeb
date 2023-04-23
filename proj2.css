@@ -10,7 +10,7 @@
   }
 
 .main-grid div{
-  background-color: rgb(86, 33, 0);
+  background-color: rgb(90, 53, 17);
   border: 0.5px solid black;
 }
 
@@ -32,13 +32,18 @@ body{
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 5;
+  background-color: #f7f7f7;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
 .equ{
+  background-color: rgb(255, 255, 255);
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 5;
+  overflow:hidden;
 }
 
 .piano{
@@ -54,8 +59,9 @@ body{
   grid-row-start: 5;
   grid-row-end: 6;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .main{
@@ -63,6 +69,7 @@ body{
   grid-column-end: 5;
   grid-row-start: 4;
   grid-row-end: 5;
+  position: relative;
 }
 
 .middle{
@@ -84,4 +91,121 @@ body{
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 3;
+  position: relative;
+}
+
+.keys {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  background-color: #ff9900; 
+}
+
+.simple-piano-keys {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.simple-piano-key {
+  flex-grow: 1;
+  background-color: white;
+  border: 1px solid #333333;
+  cursor: pointer;
+  position: relative;
+}
+
+.simple-piano-key.black {
+  background-color: black;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 1;
+  right: 0;
+}
+
+.main-grid .simple-piano-keys .simple-piano-key:not(.black) {
+  background-color: white;
+}
+
+.songs-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.songs-list li {
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.songs-list li:hover {
+  transform: scale(1.05);
+  color: #333333;
+}
+
+.songs-list li.playing {
+  color: #7c0f0f;
+  font-weight: bold;
+}
+
+#visualizer {
+  width: 100%;
+  height: 100%;
+}
+
+#wave {
+  width: 100%;
+  height: 100%;
+}
+
+.song-duration-container {
+  position: absolute;
+  left: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+
+.timer {
+  margin-left: 20px;
+}
+.play-icon,
+.pause-icon {
+  font-size: 16px;
+}
+
+.footer-right .stop {
+  font-size: 20px;
+}
+
+.footer-right button {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
 }

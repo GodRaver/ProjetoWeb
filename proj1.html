@@ -1,35 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediaPlayer</title>
-    <link rel="stylesheet" href="proj2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-v6HmdU6Xd1HR6tuioU6TjYG6SDzT2rRXm9XcJWZB8fZWXqpQ4+4jtTNBnEkzCRbl+mJLKfE+swdu9gFpJNC1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MediaPlayer</title>
+        <link rel="stylesheet" href="proj2.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-v6HmdU6Xd1HR6tuioU6TjYG6SDzT2rRXm9XcJWZB8fZWXqpQ4+4jtTNBnEkzCRbl+mJLKfE+swdu9gFpJNC1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.30/Tone.js"></script>
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+    </head>
+    <body>
+        <div class="main-grid">
+            <div class="top">
+                    <label for="file-input">Select</label>
+                    <input type="file" id="file-input" accept="audio/*" multiple hidden>            
+            </div>
+            <div class="lat">
+                <ul class="songs-list"></ul>
+            </div>
+            <div class="equ">3
+                <canvas id="visualizer" width="800" height="400"></canvas>
+            </div>
+            <div class="middlewave">
+                <div class="Wave"></div>
+            </div>
+            <div class="middle">5</div>
+            <div class="right">6</div>
+            <div class="main">
+                <div class="keys">
+                    <div class="simple-piano-keys"></div>
+                </div>
+            </div>
+            <div class="piano">8</div>
+            <div class="footer">
+                <div class="footer-left">
+                    <div id="timer">
+                        <span class="current-time">0:00</span>
+                        /
+                        <span class="duration">0:00</span>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <button id="playButton">
+                        <div class="play-pause-icon">
+                          <span class="play-icon" id="playIcon" style="font-weight:bold;">▶</span>
+                          <span class="pause-icon" id="pauseIcon" style="display:none;">||</span>
+                        </div>
+                      </button>
+                    <button id="stop-btn"><i class="stop" id="stopIcon">■</i></button>
+                </div>
+            </div> 
+        </div>    
 
-</head>
-<body>
-    <div class="main-grid">
-        <div class="top">
-            <label for="file-input">Select</label>
-            <input type="file" id="file-input" accept="audio/*" multiple hidden>
-        </div>
-        <div class="lat">
-            <ul class="songs-list"></ul>
-        </div>
-        <div class="equ">3</div>
-        <div class="middlewave">4</div>
-        <div class="middle">5</div>
-        <div class="right">6</div>
-        <div class="main">7</div>
-        <div class="piano">8</div>
-        <div class="footer">
-            <button id="play-pause-btn"><i class="fas fa-play"></i></button>
-            <button id="stop-btn"><i class="fas fa-stop"></i></button>
-        </div>
-      </div>    
-
-      <script src="script.js"></script>
-</body>
-</html>
+        <script src="script.js"></script>
+    </body>
+    </html>
